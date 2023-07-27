@@ -1,0 +1,1409 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding: 10rem;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans';
+    background: #121212;
+    background-image: url('background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 40px;
+}
+
+/* Hide vertical scrollbar on the whole website */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+a{ 
+    text-decoration: none;
+}
+
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(134, 134, 134, 0.10);
+    backdrop-filter: blur(10px);
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+}
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+}
+
+.profile-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-logo {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.navbar-logo h2 {
+    padding-left: 0px;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 3rem;
+}
+
+.navbar-list.show {
+    display: flex;
+    flex-direction: column;
+    background: rgba(134, 134, 134, 0.10);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 80px; /* Adjust the top position as per your design */
+    right: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.navbar-list li {
+    list-style: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    float: right;
+}
+
+.navbar-list li .Collaborate{
+    border-radius: 5px;
+    background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.navbar-list li .active{
+    color: #7197FA;
+}
+
+.navbar-list li:hover{
+    color: #7197FA;
+}
+
+.navbar-list a {
+    text-decoration: none;
+}
+
+.navbar-logo {
+    color: #FFFFFF;
+}
+
+.navbar-logo{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-list li .Collaborate:hover{
+    background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+    box-shadow: #121212;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    padding: 160px 0px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hero-header {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero-header h1{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color: #E771FA;
+}
+
+.hero-header h1 .name {
+    color: #7197FA;
+}
+
+.hero-button {
+    margin-top: 80px;
+}
+
+.hero-button a{
+    
+    color: white;
+    background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+}
+
+.hero-button a:hover {
+    background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+}
+
+.hero-button h2{
+    padding: 12px 32px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+}
+
+.socmed {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    gap: 4rem;
+}
+
+.porto {
+    display: flex;
+    flex-direction: column;
+    height: 900px;
+    padding: 160px 0px;
+    text-align: center;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.porto h2{
+    width: 400px;
+    color: #7197FA;
+    font-size: 20px;
+}
+
+.porto h3{
+    width: 400px;
+    color: white;
+    font-size: 20px;
+}
+
+.porto .ui {
+    color: #E771FA;
+}
+
+.porto .web{
+    color: #E771FA;
+}
+
+.frame {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    text-align: left;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    width: 948px;
+    height: 551px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(134, 134, 134, 0.20);
+    backdrop-filter: blur(20px);
+}
+
+.frame img{
+    margin-top: 40px;
+    width: 373px;
+    height: 372px;
+    flex-shrink: 0;
+}
+
+.button-porto a{
+    display: flex;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 140px;
+    height: 36px;
+    margin-top: 20px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    color: white;
+}
+
+.button-porto a:hover{
+    background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+}
+
+.button-porto h3{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/*
+About
+*/
+
+.about {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    margin-top: 80px;
+    padding: 160px 0px;
+    align-items: center;
+}
+
+.about-title h3{
+    color: #7197FA;
+    text-align: center;
+}
+
+.about-title .subtitle{
+    color: #E771FA;
+}
+
+
+.about-desc {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    text-align: left;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.about-desc h3{
+    width: 500px;
+    font-weight: 500;
+    color: white;
+    margin-left: 20px;
+    
+}
+
+/*
+Tech
+*/
+
+.tech {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    padding: 160px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tech-title h3{
+    color: #7197FA;
+    width: 550px;
+}
+
+.tech-title .subtitle{
+    color: #E771FA;
+}
+
+.tech-frame {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    text-align: left;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 792px;
+    height: 321px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(134, 134, 134, 0.20);
+    backdrop-filter: blur(20px);
+}
+
+/*
+people
+*/
+
+.people {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    padding: 160px 0px;
+    justify-content: center;
+}
+
+.people-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.people-title h3{
+    color: #7197FA;
+}
+
+.people-title .subtitle{
+    color: #E771FA;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    height: 200px;
+    padding: 39px 0px 256px 0px;;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(134, 134, 134, 0.20);
+    backdrop-filter: blur(15px);
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+    color: #7197FA;
+}
+
+.nama {
+    margin: 30px;
+    color: white;
+}
+
+.testimoni {
+    color: white;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.cta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.cta a {
+    display: flex;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 140px;
+    height: 36px;
+    margin-top: 50px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.cta a:hover {
+    transition: .5s;
+    background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+}
+
+.cta h2 {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.cta h2:hover {
+    color: white;
+    transition: .5s;
+}
+
+/*
+Footer
+*/
+
+footer {
+    height: 62px;
+    background: #292929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-socmed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(134, 134, 134, 0.10);
+        backdrop-filter: blur(10px);
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 2rem;
+    }
+    .navbar-list {
+        display: none;
+    }
+    
+    .hamburger-icon {
+        display: block;
+    }
+    
+    /* Show the navbar links in the hamburger menu when the hamburger icon is clicked */
+    .hamburger-icon.active + .navbar-list {
+        display: flex;
+        flex-direction: column;
+        background: rgba(134, 134, 134, 0.10);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 80px; /* Adjust the top position as per your design */
+        right: 3rem;
+        padding: 1rem;
+        border-radius: 10px;
+        gap: 1rem;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        color: #E771FA;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 12px;
+        font-style: normal;
+        text-align: center;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 90px;
+    }
+
+    .porto {
+        display: flex;
+        flex-direction: column;
+        padding: 160px 0px;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .frame {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        text-align: left;
+        justify-content: space-evenly;
+        width: 800px;
+        height: 480px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(20px);
+        padding: 40px;
+        justify-content: center;
+    }
+
+
+    .frame img{
+        margin-top: 40px;
+        width: 350px;
+        height: 350px;
+        flex-shrink: 0;
+    }
+    
+    .button-porto a{
+        display: flex;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 140px;
+        height: 36px;
+        margin-top: 20px;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        color: white;
+    }
+    
+    .button-porto a:hover{
+        background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+    }
+    
+    .button-porto h2{
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .tech-frame {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        text-align: left;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 600px;
+        height: 200px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(20px);
+    }
+
+    .tech-frame img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 912px) {
+
+    body{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(134, 134, 134, 0.10);
+        backdrop-filter: blur(10px);
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 2rem;
+    }
+    .navbar-list {
+        display: none;
+    }
+    
+    .hamburger-icon {
+        display: block;
+    }
+    
+    /* Show the navbar links in the hamburger menu when the hamburger icon is clicked */
+    .hamburger-icon.active + .navbar-list {
+        display: flex;
+        flex-direction: column;
+        background: rgba(134, 134, 134, 0.10);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 80px; /* Adjust the top position as per your design */
+        right: 3rem;
+        padding: 1rem;
+        border-radius: 10px;
+        gap: 1rem;
+    }
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        color: #E771FA;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 12px;
+        font-style: normal;
+        text-align: center;
+        padding: 80px 0px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 90px;
+    }
+
+    .hero h1{
+        font-size: 36px;
+    }
+
+    .hero-header {
+        align-items: center;
+    }
+
+    .hero-header h1{
+        font-size: 24px;
+    }
+
+    .hero-header h1 .name {
+        width: 100%;
+
+    }
+
+    .porto {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 246px;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .frame {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        text-align: left;
+        justify-content: space-evenly;
+        width: 600px;
+        height: 400px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(20px);
+        padding: 30px;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .porto1 h3{
+        font-size: 16px;
+        width: 300px;
+    }
+
+
+    .frame img{
+        margin-top: 40px;
+        width: 300px;
+        height: 300px;
+        flex-shrink: 0;
+    }
+    
+    .button-porto a{
+        display: flex;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 140px;
+        height: 36px;
+        margin-top: 20px;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        color: white;
+    }
+    
+    .button-porto a:hover{
+        background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+    }
+    
+    .button-porto h2{
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .about{
+        padding: 80px;
+    }
+
+    .about-desc h3{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .tech {
+        padding: 80px;
+    }
+
+    .tech-frame {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        text-align: left;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 40px;
+        width: 400px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(20px);
+    }
+
+    .tech-frame img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .people {
+        padding: 80px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        margin-top: 45px;
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .card1 {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 150px;
+        padding: 39px 0px 256px 0px;;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(15px);
+    }
+    
+    .foto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        width: 75px;
+        height: 75px;
+        flex-shrink: 0;
+        color: #7197FA;
+    }
+    
+    .nama {
+        margin: 20px;
+        color: white;
+    }
+    
+    .testimoni h4{
+        color: white;
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 690px) {
+
+    body{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(134, 134, 134, 0.10);
+        backdrop-filter: blur(10px);
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 2rem;
+    }
+    .navbar-list {
+        display: none;
+    }
+    
+    .hamburger-icon {
+        display: block;
+    }
+    
+    /* Show the navbar links in the hamburger menu when the hamburger icon is clicked */
+    .hamburger-icon.active + .navbar-list {
+        display: flex;
+        flex-direction: column;
+        background: rgba(134, 134, 134, 0.10);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 80px; /* Adjust the top position as per your design */
+        right: 3rem;
+        padding: 1rem;
+        border-radius: 10px;
+        gap: 1rem;
+    }
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        color: #E771FA;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 12px;
+        font-style: normal;
+        text-align: center;
+        padding: 80px 0px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 90px;
+    }
+
+    .hero h1{
+        font-size: 36px;
+    }
+
+    .hero-header {
+        align-items: center;
+    }
+
+    .hero-header h1{
+        font-size: 24px;
+    }
+
+    .hero-header h1 .name {
+        width: 100%;
+
+    }
+
+    .porto {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 0px;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .frame {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        text-align: left;
+        justify-content: space-evenly;
+        width: 300px;
+        height: 180px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(20px);
+        justify-content: center;
+    }
+
+    .porto1 {
+        width: 100%;
+    }
+
+    .porto1 h3{
+        font-size: 8px;
+        width: 100%;
+    }
+
+
+    .frame img{
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        flex-shrink: 0;
+    }
+    
+    .button-porto a{
+        display: flex;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 140px;
+        height: 36px;
+        margin-top: 20px;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        color: white;
+    }
+    
+    .button-porto a:hover{
+        background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+    }
+    
+    .button-porto h2{
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .about{
+        padding: 80px;
+    }
+
+    .about-desc {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align:center;
+    }
+
+    .tech {
+        padding: 80px;
+    }
+
+    .tech-frame {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        text-align: left;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 40px;
+        width: 250px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(20px);
+    }
+
+    .tech-frame img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .people {
+        padding: 80px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        margin-top: 45px;
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .card1 {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 50px;
+        padding: 39px 0px 256px 0px;;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(15px);
+    }
+    
+    .foto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        flex-shrink: 0;
+        color: #7197FA;
+    }
+    
+    .foto img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .nama {
+        margin: 0px;
+        padding: 0px 5px;
+        color: white;
+    }
+
+    .nama h3{
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .testimoni h4{
+        color: white;
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+        font-weight: 300;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    body{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(134, 134, 134, 0.10);
+        backdrop-filter: blur(10px);
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 2rem;
+    }
+    .navbar-list {
+        display: none;
+    }
+
+    .socmed {
+        gap: 2rem;
+    }
+    
+    .hamburger-icon {
+        display: block;
+    }
+    
+    /* Show the navbar links in the hamburger menu when the hamburger icon is clicked */
+    .hamburger-icon.active + .navbar-list {
+        display: flex;
+        flex-direction: column;
+        background: rgba(134, 134, 134, 0.10);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 80px; /* Adjust the top position as per your design */
+        right: 3rem;
+        padding: 1rem;
+        border-radius: 10px;
+        gap: 1rem;
+    }
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        color: #E771FA;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 12px;
+        font-style: normal;
+        text-align: center;
+        padding: 80px 0px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 90px;
+        height: 400px;
+    }
+
+    .hero h1{
+        font-size: 36px;
+    }
+
+    .hero-header {
+        align-items: center;
+    }
+
+    .hero-header h1{
+        font-size: 24px;
+    }
+
+    .hero-header h1 .name {
+        width: 100%;
+
+    }
+
+    .porto {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 0px;
+        height: 600px;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .porto h2{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .frame {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        text-align: left;
+        justify-content: space-evenly;
+        width: 250px;
+        height: 150px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(20px);
+        justify-content: center;
+    }
+
+    .porto1 {
+        width: 100%;
+    }
+
+    .porto1 h3{
+        font-size: 6px;
+        width: 100%;
+    }
+
+
+    .frame img{
+        margin-top: 20px;
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+    }
+    
+    .button-porto a{
+        display: flex;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 100px;
+        height: 20px;
+        margin-top: 20px;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        color: white;
+        font-size: 20px;
+    }
+    
+    .button-porto a:hover{
+        background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+    }
+    
+    .button-porto h3{
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .about{
+        padding: 80px 0px;
+    }
+
+    .about-desc {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        text-align:center;
+    }
+
+    .about-desc h3{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .tech {
+        padding: 80px;
+        height: 600px;
+    }
+
+    .tech-frame {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        text-align: left;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 40px;
+        width: 250px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(20px);
+    }
+
+    .tech-frame img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .people {
+        padding: 80px;
+    }
+
+    .tech-title h3{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .people-title h3{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        margin-top: 45px;
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .card1 {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        height: 50px;
+        padding: 39px 0px 256px 0px;;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: rgba(134, 134, 134, 0.20);
+        backdrop-filter: blur(15px);
+    }
+    
+    .foto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        flex-shrink: 0;
+        color: #7197FA;
+    }
+    
+    .foto img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .nama {
+        margin: 0px;
+        padding: 0px 5px;
+        color: white;
+    }
+
+    .nama h3{
+        font-weight: 500;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .testimoni h4{
+        color: white;
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+        font-weight: 300;
+        font-size: 8px;
+    }
+
+    .cta {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: normal;
+        text-align: center;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+    }
+    
+    .cta a {
+        display: flex;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #5383FE 0%, #5F88F3 52.60%, #5383FE 100%);
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 75px;
+        height: 20px;
+        margin-top: 50px;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }
+    
+    .cta a:hover {
+        transition: .5s;
+        background: linear-gradient(180deg, #3a6be7 0%, #5F88F3 52.60%, #3a6be7 100%);
+    }
+    
+    .cta h2 {
+        color: #FFFFFF;
+        font-size: 12px;
+    }
+    
+    .cta h2:hover {
+        color: white;
+        transition: .5s;
+    }
+}
